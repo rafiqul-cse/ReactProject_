@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-slate-100 bg-white/90 backdrop-blur">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        
+        {/* Mobile: hamburger on the left */}
         <button
           type="button"
           className="p-2 -ml-2 rounded-md text-slate-700 hover:bg-slate-100 md:hidden"
@@ -39,7 +39,7 @@ export default function Navbar() {
           <img src={logo} alt="Dev Stack" className="h-8 w-auto" />
         </a>
 
-
+        {/* Desktop nav links, centered */}
         <ul className="hidden md:flex flex-1 items-center justify-center gap-8 text-sm font-medium text-slate-600">
           {NAV_LINKS.map((link) => (
             <li key={link.label}>
@@ -53,7 +53,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-
+        {/* Right: auth actions */}
         <div className="flex items-center gap-2 sm:gap-4">
           <button
             type="button"
@@ -70,6 +70,7 @@ export default function Navbar() {
         </div>
       </nav>
 
+      {/* Mobile dropdown menu */}
       {menuOpen && (
         <ul className="flex flex-col gap-1 border-t border-slate-100 bg-white px-4 py-3 text-sm font-medium text-slate-700 md:hidden">
           {NAV_LINKS.map((link) => (

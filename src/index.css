@@ -16,7 +16,8 @@ h1, h2, h3, h4 {
   @apply font-sans;
 }
 
-
+/* Shared brand gradient text utility — one definition, reused across
+   the brand name, hero highlight, and primary buttons. */
 .brand-gradient-text {
   @apply bg-brand bg-clip-text text-transparent;
 }

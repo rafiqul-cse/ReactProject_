@@ -6,12 +6,16 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import TechnologyGrid from "./components/TechnologyGrid";
 import StackSidebar from "./components/StackSidebar";
+import Footer from "./components/Footer";
 
 function App() {
   const [technologies, setTechnologies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [stack, setStack] = useState([]);
 
+  // Load technology data from the local JSON file. This is written as a
+  // fetch so the loading state (and useEffect) genuinely does something,
+  // even though on a local file it resolves almost instantly.
   useEffect(() => {
     let isMounted = true;
 
@@ -82,6 +86,8 @@ function App() {
           />
         </div>
       </section>
+
+      <Footer />
 
       <ToastContainer position="top-right" autoClose={2500} pauseOnHover newestOnTop />
     </div>
