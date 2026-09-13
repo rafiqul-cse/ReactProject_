@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-body text-slate-700 bg-white;
+}
+
+h1, h2, h3, h4 {
+  @apply font-sans;
+}
+
+
+.brand-gradient-text {
+  @apply bg-brand bg-clip-text text-transparent;
+}
+
+.brand-gradient-bg {
+  @apply bg-brand;
+}
+
+:focus-visible {
+  outline: 2px solid #8b3dff;
+  outline-offset: 2px;
+}
